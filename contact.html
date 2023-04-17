@@ -119,6 +119,100 @@
             <!-- Page Header End -->
 
 
+            <!-- Contact form-->
+            <div class="container">
+                <div class="row">
+                  <div class="col align-self-center">
+                    <h1 class="text-center">Drop your queries!</h1>
+                    <!-- contact form -->
+                    <form id="myForm">
+                      <!-- name -->
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                          type="name"
+                          name="name"
+                          class="form-control"
+                          id="name"
+                          placeholder="Enter your name here"
+                        />
+                      </div>
+          
+                      <!-- email -->
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Enter your email here"
+                        />
+                      </div>
+          
+                      <!-- subject -->
+                      <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input
+                          type="text"
+                          name="subject"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Enter email subject here"
+                        />
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                      </div>
+          
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- bootstrap js -->
+              <script
+                src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"
+              >
+            </script>
+              <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+                crossorigin="anonymous"
+              >
+            </script>
+
+            <script>
+                // listen to the form submission
+                document
+                  .getElementById("myForm")
+                  .addEventListener("submit", function (event) {
+                    event.preventDefault();
+          
+                    const serviceID = "service_981i2pt";
+                    const templateID = "template_ozexgom";
+          
+                    // send the email here
+                    emailjs.sendForm(serviceID, templateID, this).then(
+                      (response) => {
+                        console.log("SUCCESS!", response.status, response.text);
+                        alert("SUCCESS!");
+                      },
+                      (error) => {
+                        console.log("FAILED...", error);
+                        alert("FAILED...", error);
+                      }
+                    );
+                  });
+              </script>
+
+            <!--form ends-->
+
             <!-- Contact Start -->
             <div class="contact">
                 <div class="container">
@@ -128,17 +222,6 @@
                             <div class="contact-info">
                                 <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=D-29,%20OFFICE%20NO-206,%20BETWEEN%20METRO%20PILLAR%20NO%20-%2033%20AND%2034,%20Laxmi%20Nagar,%20New%20Delhi,%20Delhi%20110092+(CA%20BINOD%20VERMA%20&amp;%20CO)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe></div>
                                
-                               
-                                <form id="contact-form" class="col-md-6">
-                                    <input type="hidden" name="contact_number">
-                                    <label>Name</label>
-                                    <input type="text" name="user_name">
-                                    <label>Email</label>
-                                    <input type="email" name="user_email">
-                                    <label>Message</label>
-                                    <textarea name="message"></textarea>
-                                    <input type="submit" value="Send">
-                                </form>
 
 
                                 <h3>How to reach us:</h3>
