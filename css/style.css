@@ -136,10 +136,11 @@ a:focus {
         z-index: 1;
     }
 
-    .header .navbar-light a.nav-link:hover,
-    .header .navbar-light a.nav-link.active {
+    .header .navbar-light a.nav-link:hover
+    {
         color: #4F84C4;
     }
+
 }
 
 @media (max-width: 992px) {
@@ -214,8 +215,8 @@ a:focus {
     margin-bottom: 45px;
     padding: 80px 0;
     text-align: center;
-    background: rgb(244,231,171);
-    background: linear-gradient(355deg, rgba(244,231,171,0.4206932773109243) 0%, rgba(231,202,35,1) 100%, rgba(110,109,4,0.6727941176470589) 100%);
+    background: rgb(79,132,196);
+    background: linear-gradient(355deg, rgba(79,132,196,1) 0%, rgba(201,214,215,1) 100%);
 }
 
 .page-header h2 {
@@ -230,7 +231,7 @@ a:focus {
     padding: 0 12px;
     font-size: 16px;
     font-weight: 400;
-    color: #878682;
+    color: #e8fdff;
 }
 
 .page-header a::after {
@@ -241,7 +242,7 @@ a:focus {
     top: 6.5px;
     right: -6px;
     border-radius: 7px;
-    background: #878682;
+    background: #e8fdff;
 }
 
 .page-header a:last-child::after {
@@ -389,7 +390,7 @@ a:focus {
 
 .about img {
     max-width: 100%;
-    border-radius: 0 30px 30px 0;
+    
 }
 
 @media(max-width: 767.98px) {
@@ -582,7 +583,7 @@ a:focus {
   position: absolute;; /* Set position to absolute */
   left: 50%; /* Set left position to 50% */
   transform: translateX(-50%); /* Center horizontally using negative margin */
-  bottom: 0
+  bottom: 0;
   margin-bottom: 20px;
   margin-top: 1px;
 
@@ -681,6 +682,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 45px 0;
+    margin-bottom: 50px;
 }
 
 .service-row .service-row-img {
